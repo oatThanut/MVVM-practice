@@ -1,0 +1,7 @@
+# DemoMVVM project since 5 Jun 2018
+
+# macOS file & other unnecessary file
+.DS_Store
+.xcuserstate
+xcodeproj/
+xcuserdata/
