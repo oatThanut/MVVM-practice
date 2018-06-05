@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class Pet {
+class Pet {
     
     let Name: String
     let Image: UIImage
