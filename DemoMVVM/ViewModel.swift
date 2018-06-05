@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class PetViewModel {
+class PetViewModel {
     
     public var pet: Pet
     private var num: Int
@@ -39,5 +39,12 @@ public class PetViewModel {
         }
         let key = Array(DataSource.petList.keys)[num]
         pet = Pet(name: "\(key)", image: DataSource.petList[key.description]!)
+    }
+}
+
+extension PetViewModel {
+    public func configure(_ view: PetViewController) {
+        view.Image.image = pet.Image
+        view.NameLabel.text = pet.Name
     }
 }
