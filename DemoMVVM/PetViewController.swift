@@ -19,17 +19,22 @@ class PetViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         viewModel = PetViewModel()
-        viewModel?.configure(self)
+        UpdateUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func UpdateUI() {
+        Image.image = viewModel?.image
+        NameLabel.text = viewModel?.name
+    }
 
     @IBAction func NextBtn(_ sender: Any) {
         viewModel?.next()
-        viewModel?.configure(self)
+        UpdateUI()
     }
     
 }

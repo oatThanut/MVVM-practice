@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class Pet {
+class PetModel {
     
-    let Name: String
-    let Image: UIImage
+    let name: String
+    let image: UIImage
     
-    public init(name: String, image: UIImage) {
-        Name = name
-        Image = image
+    init(name: String, image: UIImage) {
+        self.name = name
+        self.image = image
     }
 }
